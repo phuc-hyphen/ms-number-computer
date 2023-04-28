@@ -1,4 +1,5 @@
 version: 2.1
+
 jobs:
   build:
     docker:
@@ -11,7 +12,8 @@ jobs:
       - image: cimg/node:20.0.0
     steps:
       - checkout
-      - run:  npm test
+      - run: npm install
+      - run: npm test
 
   # build-and-test:
   #   docker:
