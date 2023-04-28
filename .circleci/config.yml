@@ -1,7 +1,8 @@
-version: 2.1
-  orbs:
-    node: circleci/node:12.16.1
+version: 2.1  # use CircleCI 2.1 when available
   jobs:
+    build:
+      docker:
+        - image: cimg/node:20.0.0
     build-and-test:
       executor:
         name: node/default
